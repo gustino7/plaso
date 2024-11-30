@@ -16,7 +16,7 @@ class FilesByGoogleEventTest(test_lib.SQLitePluginTestCase):
     """Test the Process function on a Files by Google file."""
     plugin = files_by_google.FilesByGoogleEventData()
     storage_writer = self._ParseDatabaseFileWithPlugin(
-        ['files_master_database.db'], plugin)
+        ['files_master_database'], plugin)
 
     number_of_event_data = storage_writer.GetNumberOfAttributeContainers(
         'event_data')
